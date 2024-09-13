@@ -2,7 +2,10 @@
 // import 'package:anim/animatedCrossfade.dart';
 // import 'package:anim/clipRRect.dart';
 // import 'package:anim/mapping.dart';
-import 'package:anim/sharedpref.dart';
+import 'package:anim/chatgpt.dart';
+// import 'package:anim/prefs.dart';
+// import 'package:anim/sharedpref.dart';
+// import 'package:anim/sharedpref.dart';
 // import 'package:anim/heroanimation.dart';
 // import 'package:anim/listwheel.dart';
 // import 'package:anim/animatedOpacity.dart';
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: crossfade(),
-      home: Sharedprefs(),
+      home: const Chatgpt(),
       
     );
   }

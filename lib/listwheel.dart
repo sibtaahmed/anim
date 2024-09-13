@@ -17,7 +17,7 @@ class _WheelState extends State<Wheel> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Hero Detailed page',
           style: TextStyle(
             fontSize: 25,
@@ -29,9 +29,9 @@ class _WheelState extends State<Wheel> {
          actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => clip(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const clip(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,

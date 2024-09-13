@@ -15,7 +15,7 @@ class _SharedprefsState extends State<Sharedprefs> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'SHARED PREFERENCES',
             style: TextStyle(
                 fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
@@ -35,7 +35,7 @@ class _SharedprefsState extends State<Sharedprefs> {
                       label: const Text('user'),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25),
-                          borderSide: BorderSide(color: Colors.red)),
+                          borderSide: const BorderSide(color: Colors.red)),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(
@@ -45,36 +45,32 @@ class _SharedprefsState extends State<Sharedprefs> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 11),
+                  const SizedBox(height: 11),
                   ElevatedButton(
                       onPressed: () async {
                          name = nameController.text.toString();
                         prefs = await SharedPreferences.getInstance();
                        await prefs?.setString("N", "$name");
                       },
-                      child: Text('Save')),
+                      child: const Text('Save')),
                   ElevatedButton(
                       onPressed: () async {
                         prefs = await SharedPreferences.getInstance();
-                        getName = await prefs?.getString("N");
+                        getName = prefs?.getString("N");
                         print(getName);
                         setState(() {
                           
                         });
                       },
-                      child: Text('Get')),
+                      child: const Text('Get')),
                       ElevatedButton(
                       onPressed: () async {
-                        prefs?.clear();
-                        nameController.clear;
-                        // prefs = await SharedPreferences.getInstance();
-                        // getName = await prefs?.getString("N");
-                        // print(getName);
+                        await prefs!.clear();
                         setState(() {
                           
                         });
                       },
-                      child: Text('Clear')),
+                      child: const Text('Clear')),
                   Text("$getName"),
                 ],
               ),

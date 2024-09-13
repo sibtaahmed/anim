@@ -15,7 +15,7 @@ class _opacityState extends State<opacity> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'ANIMATION OPACITY',
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
@@ -24,9 +24,9 @@ class _opacityState extends State<opacity> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => animprep(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const animprep(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,
@@ -39,14 +39,14 @@ class _opacityState extends State<opacity> {
           children: [
             AnimatedOpacity(
               opacity: myOpacity,
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               curve: Curves.slowMiddle,
               child: Container(
                  width: 100,
                 height: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                color: Color.fromARGB(255, 240, 14, 14),
+                color: const Color.fromARGB(255, 240, 14, 14),
                 // shape: BoxShape.circle,
                 ),
                
@@ -56,12 +56,12 @@ class _opacityState extends State<opacity> {
               padding: const EdgeInsets.all(8.0),
               child: AnimatedOpacity(
                 opacity: myOpacity,
-                duration: Duration(seconds: 1),
+                duration: const Duration(seconds: 1),
                 curve: Curves.slowMiddle,
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 29, 185, 29),
+                  color: const Color.fromARGB(255, 29, 185, 29),
                   // shape: BoxShape.circle,
                   ),
                   width: 100,
@@ -71,12 +71,12 @@ class _opacityState extends State<opacity> {
             ),
             AnimatedOpacity(
               opacity: myOpacity,
-              duration: Duration(seconds: 1),
+              duration: const Duration(seconds: 1),
               curve: Curves.slowMiddle,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                color: Color.fromARGB(255, 222, 243, 29),
+                color: const Color.fromARGB(255, 222, 243, 29),
                 ),
                 width: 100,
                 height: 100,
@@ -95,7 +95,7 @@ class _opacityState extends State<opacity> {
                     isVisible= true;
                   }
                 });
-              }, child: Text('GO')),
+              }, child: const Text('GO')),
             )
           ],
         ),

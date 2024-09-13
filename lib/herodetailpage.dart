@@ -13,15 +13,15 @@ class _nextpageState extends State<nextpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hero Detailed page',style: TextStyle(
+        title: const Text('Hero Detailed page',style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
        backgroundColor: Colors.blue, 
          actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Wheel(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Wheel(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,

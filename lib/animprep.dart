@@ -16,14 +16,14 @@ class _animprepState extends State<animprep> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animations'),
+        title: const Text('Animations'),
         backgroundColor: Colors.blue,
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => myhero(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const myhero(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,
@@ -38,7 +38,7 @@ class _animprepState extends State<animprep> {
                 width: _width,
                 height: _height,
                 color: bgcolor,
-                duration: Duration(seconds: 2),),
+                duration: const Duration(seconds: 2),),
             Padding(
               padding: const EdgeInsets.all(21.0),
               child: ElevatedButton(onPressed: (){
@@ -55,7 +55,7 @@ class _animprepState extends State<animprep> {
                     bgcolor = Colors.black;
                   }
                 });
-              }, child: Text('start')),
+              }, child: const Text('start')),
             )
           ],
         ),

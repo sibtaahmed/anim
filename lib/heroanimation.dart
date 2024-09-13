@@ -13,15 +13,15 @@ class _myheroState extends State<myhero> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HERO ANIMATION',style: TextStyle(
+        title: const Text('HERO ANIMATION',style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),),
         backgroundColor: Colors.blue,
          actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => nextpage(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const nextpage(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,

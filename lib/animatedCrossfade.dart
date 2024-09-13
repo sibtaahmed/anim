@@ -38,7 +38,7 @@ class _crossfadeState extends State<crossfade> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'CROSSFADE ANIMATION',
           style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
@@ -47,9 +47,9 @@ class _crossfadeState extends State<crossfade> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => opacity(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const opacity(),));
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
                 size: 40,
@@ -60,7 +60,7 @@ class _crossfadeState extends State<crossfade> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AnimatedCrossFade(duration: Duration(seconds: 2),firstChild: Container(
+            AnimatedCrossFade(duration: const Duration(seconds: 2),firstChild: SizedBox(
               width: 200,
               height: 200,
               // color: const Color.fromARGB(255, 211, 219, 223),
@@ -71,7 +71,7 @@ class _crossfadeState extends State<crossfade> {
             ),
             ElevatedButton(onPressed: (){
               reload();
-            }, child: Text('lets Do'))
+            }, child: const Text('lets Do'))
           ],
         ),
       )
