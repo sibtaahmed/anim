@@ -2,7 +2,8 @@
 // import 'package:anim/animatedCrossfade.dart';
 // import 'package:anim/clipRRect.dart';
 // import 'package:anim/mapping.dart';
-import 'package:anim/chatgpt.dart';
+// import 'package:anim/chatgpt.dart';
+import 'package:anim/form.dart';
 // import 'package:anim/prefs.dart';
 // import 'package:anim/sharedpref.dart';
 // import 'package:anim/sharedpref.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: crossfade(),
-      home: const Chatgpt(),
+      home: const formprep(),
       
     );
   }
