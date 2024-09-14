@@ -105,7 +105,7 @@ class _formprepState extends State<formprep> {
                            padding: const EdgeInsets.all(20.0),
                            child: Text('Creating an account means you are satisfied with our services and our privacy policy',style: TextStyle(color: Colors.grey),),
                          ),
-              SizedBox(width: 20,),
+              SizedBox(width: double.infinity,),
               Center(child: ElevatedButton(
                 onPressed: (){}, child: Text('Sign Up'))),
                 Row(
