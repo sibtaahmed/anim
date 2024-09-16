@@ -4,6 +4,7 @@
 // import 'package:anim/mapping.dart';
 // import 'package:anim/chatgpt.dart';
 import 'package:anim/form.dart';
+import 'package:device_preview/device_preview.dart';
 // import 'package:anim/prefs.dart';
 // import 'package:anim/sharedpref.dart';
 // import 'package:anim/sharedpref.dart';
@@ -14,9 +15,15 @@ import 'package:anim/form.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() => runApp(
+//       DevicePreview(
+//         builder: (context) => const MyApp(), // Wrap your app
+//       ),
+//     );
+
+void main() => runApp(
+      const MyApp(), // Wrap your app
+    );
 
 SharedPreferences? prefs;
 
