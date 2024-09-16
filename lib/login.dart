@@ -12,11 +12,12 @@ class Loginpage extends StatefulWidget {
 class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
-    const SystemUiOverlayStyle(
- systemNavigationBarColor: Colors.blue, // Navigation bar
- statusBarColor: Colors.red, // Status bar
-);
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.white, // Set status bar color to transparent
+      statusBarIconBrightness: Brightness.dark, // Set status bar icon color
+    ));
     return Scaffold(
+      backgroundColor: Colors.white,
       // appBar: AppBar(
       //   centerTitle: true,
       //   title: const Text(
