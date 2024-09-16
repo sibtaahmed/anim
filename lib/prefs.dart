@@ -17,7 +17,7 @@ class _prefsprepState extends State<prefsprep> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Practice',
           style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
@@ -35,7 +35,7 @@ class _prefsprepState extends State<prefsprep> {
                     child: TextField(
                   controller: nameController,
                   decoration: InputDecoration(
-                    label: Text('user'),
+                    label: const Text('user'),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25),
                       borderSide: const BorderSide(
@@ -45,20 +45,20 @@ class _prefsprepState extends State<prefsprep> {
                     ),
                   ),
                 )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(onPressed: () async {
                name = nameController.text.toString();
                   prefs = await SharedPreferences.getInstance();
                   await prefs?.setString('N','$name');
-                }, child: Text("SAVE")),
+                }, child: const Text("SAVE")),
 
                 ElevatedButton(onPressed: () async {
                   prefs = await SharedPreferences.getInstance();
                  getName =  prefs?.getString('N');
                  print(getName);
-                }, child: Text("GET")),
+                }, child: const Text("GET")),
                 ElevatedButton(onPressed: () async {
                  setState(() {
                   // prefs?.clear();
@@ -66,7 +66,7 @@ class _prefsprepState extends State<prefsprep> {
                  print(nameController.text);
                    
                  });
-                }, child: Text("CLEAR")),
+                }, child: const Text("CLEAR")),
                  Text("$getName"),
               ],
             ),
