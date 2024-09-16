@@ -11,9 +11,9 @@ class _ChatgptState extends State<Chatgpt> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 52, 50, 50),
+      backgroundColor: const Color.fromARGB(255, 52, 50, 50),
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text(
             'ChatGPT Prep',
             style: TextStyle(
@@ -25,13 +25,13 @@ class _ChatgptState extends State<Chatgpt> {
       ),
       body: Column(
         children: [
-          Spacer(), // Push the cards to the center of the screen
-          Center(
+          const Spacer(), // Push the cards to the center of the screen
+          const Center(
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     CustomIconTextCard(
                       icon: Icons.star,
                       iconColor: Colors.red,
@@ -48,7 +48,7 @@ class _ChatgptState extends State<Chatgpt> {
                 SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     CustomIconTextCard(
                       icon: Icons.star,
                       iconColor: Colors.yellow,
@@ -65,12 +65,12 @@ class _ChatgptState extends State<Chatgpt> {
               ],
             ),
           ),
-          Spacer(), // Pushes the text field and button to the bottom
+          const Spacer(), // Pushes the text field and button to the bottom
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: TextField(
               decoration: InputDecoration(
-                label: Text(
+                label: const Text(
                   'Message ChatGPT',
                   style: TextStyle(color: Colors.grey),
                 ),
@@ -84,11 +84,11 @@ class _ChatgptState extends State<Chatgpt> {
                     width: 1.0,
                   ),
                 ),
-                prefixIcon: Icon(
+                prefixIcon: const Icon(
                   Icons.attach_file,
                   color: Colors.white,
                 ),
-                suffixIcon: Icon(
+                suffixIcon: const Icon(
                   Icons.upload_file_rounded,
                   color: Colors.white,
                 ),
@@ -99,7 +99,7 @@ class _ChatgptState extends State<Chatgpt> {
             padding: const EdgeInsets.only(bottom: 40, top: 10),
             child: ElevatedButton(
               onPressed: () {},
-              child: Text('SUBMIT'),
+              child: const Text('SUBMIT'),
             ),
           ),
         ],
@@ -114,11 +114,11 @@ class CustomIconTextCard extends StatelessWidget {
   final String text;
 
   const CustomIconTextCard({
-    Key? key,
+    super.key,
     required this.icon,
     required this.iconColor,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -143,10 +143,10 @@ class CustomIconTextCard extends StatelessWidget {
               color: iconColor,
               size: 30,
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 15,
               ),
             ),

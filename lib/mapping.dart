@@ -12,39 +12,38 @@ class _MapprepState extends State<Mapprep> {
     {
       'name': 'shakeel',
       'cellno': '923063440441',
-      'unread':'1',
+      'unread': '1',
     },
     {
       'name': 'zunair',
       'cellno': '923063440441',
-      'unread':'2',
+      'unread': '2',
     },
     {
       'name': 'shan',
       'cellno': '923063440441',
-       'unread':'3',
+      'unread': '3',
     },
     {
       'name': 'uzair',
       'cellno': '923063440441',
-       'unread':'4',
+      'unread': '4',
     },
     {
       'name': 'umer yameen',
       'cellno': '923063440441',
-       'unread':'5',
+      'unread': '5',
     },
     {
       'name': 'muneer akhtar',
       'cellno': '923063440441',
-       'unread':'6',
+      'unread': '6',
     },
-
   ];
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-       appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         title: const Text(
           'MAPPING LIST',
           style: TextStyle(
@@ -53,13 +52,15 @@ class _MapprepState extends State<Mapprep> {
         backgroundColor: Colors.blue,
       ),
       body: ListView(
-        children: arrdata.map((value)=> 
-            ListTile(leading: const Icon(Icons.account_circle),
-          title: Text(value['name'].toString()),
-          subtitle:Text(value['cellno'].toString()),
-          trailing: CircleAvatar(child: Text(value['unread'].toString())),)
-        ).toList()
-      ),
-    ); 
+          children: arrdata
+              .map((value) => ListTile(
+                    leading: const Icon(Icons.account_circle),
+                    title: Text(value['name'].toString()),
+                    subtitle: Text(value['cellno'].toString()),
+                    trailing:
+                        CircleAvatar(child: Text(value['unread'].toString())),
+                  ))
+              .toList()),
+    );
   }
 }

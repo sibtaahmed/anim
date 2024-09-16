@@ -12,9 +12,9 @@ class crossfade extends StatefulWidget {
 }
 
 class _crossfadeState extends State<crossfade> {
-  bool isfirst= true;
+  bool isfirst = true;
 
-   @override
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -22,61 +22,66 @@ class _crossfadeState extends State<crossfade> {
     //   reload();
     // });
   }
-  void reload(){
-    setState(() {
-      if(isfirst){
 
-      isfirst =false;
-      }else{
+  void reload() {
+    setState(() {
+      if (isfirst) {
+        isfirst = false;
+      } else {
         isfirst = true;
       }
-      
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'CROSSFADE ANIMATION',
-          style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          title: const Text(
+            'CROSSFADE ANIMATION',
+            style: TextStyle(
+                fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+          backgroundColor: Colors.blue,
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const opacity(),));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const opacity(),
+                      ));
                 },
                 icon: const Icon(
                   Icons.arrow_right,
                   color: Colors.white70,
-                size: 40,
+                  size: 40,
                 ))
           ],
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            AnimatedCrossFade(duration: const Duration(seconds: 2),firstChild: SizedBox(
-              width: 200,
-              height: 200,
-              // color: const Color.fromARGB(255, 211, 219, 223),
-            ),
-            secondChild: 
-             Image.asset('assets/DP.jpg'),
-             crossFadeState: isfirst ? CrossFadeState.showFirst :CrossFadeState.showSecond ,
-            ),
-            ElevatedButton(onPressed: (){
-              reload();
-            }, child: const Text('lets Do'))
-          ],
         ),
-      )
-      
-       
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AnimatedCrossFade(
+                duration: const Duration(seconds: 2),
+                firstChild: const SizedBox(
+                  width: 200,
+                  height: 200,
+                  // color: const Color.fromARGB(255, 211, 219, 223),
+                ),
+                secondChild: Image.asset('assets/DP.jpg'),
+                crossFadeState: isfirst
+                    ? CrossFadeState.showFirst
+                    : CrossFadeState.showSecond,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    reload();
+                  },
+                  child: const Text('lets Do'))
+            ],
+          ),
+        ));
   }
 }

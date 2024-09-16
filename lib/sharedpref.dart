@@ -16,7 +16,7 @@ class _SharedprefsState extends State<Sharedprefs> {
     return Scaffold(
         appBar: AppBar(
           title: const Text(
-            'SHARED PREFERENCES',
+            'SHARED PREFERENCES...',
             style: TextStyle(
                 fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
           ),
@@ -48,9 +48,9 @@ class _SharedprefsState extends State<Sharedprefs> {
                   const SizedBox(height: 11),
                   ElevatedButton(
                       onPressed: () async {
-                         name = nameController.text.toString();
+                        name = nameController.text.toString();
                         prefs = await SharedPreferences.getInstance();
-                       await prefs?.setString("N", "$name");
+                        await prefs?.setString("N", "$name");
                       },
                       child: const Text('Save')),
                   ElevatedButton(
@@ -58,17 +58,13 @@ class _SharedprefsState extends State<Sharedprefs> {
                         prefs = await SharedPreferences.getInstance();
                         getName = prefs?.getString("N");
                         print(getName);
-                        setState(() {
-                          
-                        });
+                        setState(() {});
                       },
                       child: const Text('Get')),
-                      ElevatedButton(
+                  ElevatedButton(
                       onPressed: () async {
                         await prefs!.clear();
-                        setState(() {
-                          
-                        });
+                        setState(() {});
                       },
                       child: const Text('Clear')),
                   Text("$getName"),
