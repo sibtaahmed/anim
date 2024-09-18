@@ -4,7 +4,7 @@
 // import 'package:anim/mapping.dart';
 // import 'package:anim/chatgpt.dart';
 import 'package:anim/form.dart';
-import 'package:device_preview/device_preview.dart';
+// import 'package:device_preview/device_preview.dart';
 // import 'package:anim/prefs.dart';
 // import 'package:anim/sharedpref.dart';
 // import 'package:anim/sharedpref.dart';
