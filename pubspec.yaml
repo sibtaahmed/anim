@@ -41,6 +41,7 @@ dependencies:
   hugeicons: ^0.0.7
   font_awesome_flutter: ^10.7.0
   flutter_native_splash: ^2.4.1
+  typewritertext: ^3.0.9
 
   
 

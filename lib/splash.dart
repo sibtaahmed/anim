@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:anim/animatedCrossfade.dart';
 import 'package:flutter/material.dart';
+import 'package:typewritertext/typewritertext.dart';
 
 class splassh extends StatefulWidget {
   const splassh({super.key});
@@ -25,25 +26,19 @@ class _splasshState extends State<splassh> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.blue,
       body: Center(
-        child: Text(
-          'Welcome',
-          style: TextStyle(
-            fontSize: 40,
+        child: TypeWriter.text(
+          'Welcome to my App........',
+          style: const TextStyle(
+            fontSize: 30,
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            shadows: [
-              Shadow(
-                blurRadius: 10.0,
-                color: Colors.black,
-                offset: Offset(5.0, 5.0),
-              ),
-            ],
           ),
+          duration: const Duration(milliseconds: 80),
         ),
       ),
-      backgroundColor: Colors.amber,
     );
   }
 }

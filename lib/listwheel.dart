@@ -9,7 +9,20 @@ class Wheel extends StatefulWidget {
 }
 
 class _WheelState extends State<Wheel> {
-  var arrIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  // Array to store image asset paths or network URLs
+  var imagePaths = [
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+    'assets/DP.jpg', // Example asset image
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,17 +55,18 @@ class _WheelState extends State<Wheel> {
       ),
       body: Center(
         child: ListWheelScrollView(
-          itemExtent: 200,
-          children: arrIndex
-              .map((value) => Padding(
+          itemExtent: 300,
+          children: imagePaths
+              .map((path) => Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(21),
-                        color: Colors.blue,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(21),
+                      child: Image.asset(
+                        path,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: 300,
                       ),
-                      width: double.infinity,
-                      alignment: Alignment.center,
                     ),
                   ))
               .toList(),
