@@ -1,3 +1,7 @@
+// import 'package:anim/form.dart';
+// import 'package:anim/mapping.dart';
+// import 'package:anim/prefs.dart';
+import 'package:anim/sharedpref.dart';
 import 'package:flutter/material.dart';
 
 class clip extends StatefulWidget {
@@ -21,6 +25,21 @@ class _clipState extends State<clip> {
           ),
         ),
         backgroundColor: Colors.blue,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Sharedprefs(),
+                    ));
+              },
+              icon: const Icon(
+                Icons.arrow_right,
+                color: Colors.white70,
+                size: 40,
+              ))
+        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -37,7 +56,7 @@ class _clipState extends State<clip> {
           children: [
             Center(
               child: Text(
-                'Hello, Gradient!',
+                ' Gradient!',
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,

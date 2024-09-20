@@ -3,7 +3,11 @@
 // import 'package:anim/clipRRect.dart';
 // import 'package:anim/mapping.dart';
 // import 'package:anim/chatgpt.dart';
-import 'package:anim/form.dart';
+// import 'package:anim/bottomnavigator.dart';
+// import 'package:anim/bottomprep.dart';
+// import 'package:anim/form.dart';
+import 'package:anim/splash.dart';
+// import 'package:anim/tabbar.dart';
 // import 'package:device_preview/device_preview.dart';
 // import 'package:anim/prefs.dart';
 // import 'package:anim/sharedpref.dart';
@@ -36,13 +40,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      // theme: ThemeData(
+      //   colorScheme: ColorScheme.fromSeed(
+      //       seedColor: const Color.fromARGB(255, 68, 183, 58)),
+      //   useMaterial3: true,
+      // ),
+      theme: ThemeData.light().copyWith(
         colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 68, 183, 58)),
-        useMaterial3: true,
+            seedColor: const Color.fromARGB(255, 103, 204, 143)),
+        iconTheme: const IconThemeData(size: 36.0, color: Colors.black87),
+        textTheme: const TextTheme(
+          bodyMedium:
+              TextStyle(fontSize: 16.0, color: Color.fromARGB(221, 15, 15, 15)),
+        ),
       ),
       // home: crossfade(),
-      home: const formprep(),
+      home: const splassh(),
     );
   }
 }

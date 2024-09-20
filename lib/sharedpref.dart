@@ -1,4 +1,5 @@
 import 'package:anim/main.dart';
+import 'package:anim/tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -14,13 +15,30 @@ class _SharedprefsState extends State<Sharedprefs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
+          centerTitle: true,
           title: const Text(
-            'SHARED PREFERENCES...',
+            'Shared Prefrences',
             style: TextStyle(
                 fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           backgroundColor: Colors.blue,
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Tabbarprep(),
+                      ));
+                },
+                icon: const Icon(
+                  Icons.arrow_right,
+                  color: Colors.white70,
+                  size: 40,
+                ))
+          ],
         ),
         body: Container(
           child: Center(
@@ -32,10 +50,11 @@ class _SharedprefsState extends State<Sharedprefs> {
                   TextField(
                     controller: nameController,
                     decoration: InputDecoration(
-                      label: const Text('user'),
+                      label: const Text('User'),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(25),
-                          borderSide: const BorderSide(color: Colors.red)),
+                          borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 236, 232, 232))),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
                         borderSide: const BorderSide(
@@ -63,10 +82,13 @@ class _SharedprefsState extends State<Sharedprefs> {
                       child: const Text('Get')),
                   ElevatedButton(
                       onPressed: () async {
-                        await prefs!.clear();
-                        setState(() {});
+                        setState(() {
+                          // prefs?.clear();
+                          nameController.clear();
+                          print(nameController.text);
+                        });
                       },
-                      child: const Text('Clear')),
+                      child: const Text("CLEAR")),
                   Text("$getName"),
                 ],
               ),

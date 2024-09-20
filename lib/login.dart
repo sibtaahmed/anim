@@ -29,148 +29,155 @@ class _LoginpageState extends State<Loginpage> {
         //   ),
         //   backgroundColor: Colors.black,
         // ),
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
+        body: SafeArea(
           child: Container(
             height: MediaQuery.of(context).size.height,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
                 colors: [
                   Colors.white,
-                  Colors.black,
+                  Color.fromARGB(255, 0, 0, 0),
                 ],
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                  ),
-                  const Text(
-                    'Login',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
-                  ),
-                  const Text(
-                    'Welcome back, SHEIKH!',
-                    style: TextStyle(
-                      fontSize: 20,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.12,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  TextField(
-                    decoration: InputDecoration(
-                      label: const Text(
-                        'Email',
+                    const Text(
+                      'Login',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+                    ),
+                    const Text(
+                      'Welcome back, SHEIKH!',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        label: const Text(
+                          'Email',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.mail,
+                          color: Color.fromARGB(255, 13, 13, 13),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 21, 21, 21))),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                          borderSide: const BorderSide(
+                            color: Color.fromARGB(255, 21, 21, 22),
+                            width: 0.5,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: const Icon(
+                          Icons.lock,
+                          color: Colors.black,
+                        ),
+                        suffixIcon: const Icon(
+                          Icons.visibility_off,
+                          color: Colors.black,
+                        ),
+                        label: const Text('Password',
+                            style: TextStyle(color: Colors.white)),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                            borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 21, 21, 21))),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                          borderSide: const BorderSide(
+                            color: Color.fromARGB(255, 21, 21, 22),
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 30),
+                      child: Text(
+                        'Creating an account means you are satisfied with our services and our privacy policy',
                         style: TextStyle(color: Colors.white),
                       ),
-                      prefixIcon: const Icon(
-                        Icons.mail,
-                        color: Color.fromARGB(255, 13, 13, 13),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.orange,
+                        shadowColor: Colors.black,
+                        elevation: 5,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 15),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                       ),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25),
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 21, 21, 21))),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 21, 21, 22),
-                          width: 0.5,
+                      child: const Center(
+                        child: Text(
+                          'SAVE',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  TextField(
-                    decoration: InputDecoration(
-                      prefixIcon: const Icon(
-                        Icons.lock,
-                        color: Colors.black,
-                      ),
-                      suffixIcon: const Icon(
-                        Icons.visibility_off,
-                        color: Colors.black,
-                      ),
-                      label: const Text('Password',
-                          style: TextStyle(color: Colors.white)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25),
-                          borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 21, 21, 21))),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 21, 21, 22),
-                          width: 1.0,
+                    const SizedBox(
+                      height: 150,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Don't have an Account?",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              color: Colors.white),
                         ),
-                      ),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 30),
-                    child: Text(
-                      'Creating an account means you are satisfied with our services and our privacy policy',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.orange,
-                      shadowColor: Colors.black,
-                      elevation: 5,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'SAVE',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 150,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Text(
-                        "Don't have an Account?",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.white),
-                      ),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const formprep()));
-                          },
-                          child: const Text('Sign Up'))
-                    ],
-                  )
-                ],
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const formprep()));
+                            },
+                            child: const Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.orange),
+                            ))
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ),

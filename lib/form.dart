@@ -32,8 +32,8 @@ class _formprepState extends State<formprep> {
             height: double.infinity,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
                 colors: [
                   Colors.white,
                   Colors.black,
@@ -197,7 +197,12 @@ class _formprepState extends State<formprep> {
                                   MaterialPageRoute(
                                       builder: (context) => const Loginpage()));
                             },
-                            child: const Text('LogIn'))
+                            child: const Text(
+                              'LogIn',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.orange),
+                            ))
                       ],
                     )
                   ],
