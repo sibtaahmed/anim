@@ -1,34 +1,36 @@
+import 'package:anim/screens/screen1.dart';
+import 'package:anim/screens/screen2.dart';
+import 'package:anim/screens/screen3.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
-class bottomnav extends StatefulWidget {
-  const bottomnav({super.key});
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
 
   @override
-  State<bottomnav> createState() => _bottomnavState();
+  State<BottomNav> createState() => _BottomNavState();
 }
 
-class _bottomnavState extends State<bottomnav> {
+class _BottomNavState extends State<BottomNav> {
   int _currentIndex = 0;
-  List body = [
-    const Text('HOME'),
-    const Text('MENU'),
-    const Text('DP'),
-    // const Icon(Icons.home),
-    // const Icon(Icons.menu),
-    // const Icon(Icons.person),
+
+  // List of screens to switch between
+  final List<Widget> body = const [
+    screen1(),
+    screen2(),
+    screen3(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: body[_currentIndex],
-      ),
+      body: body[
+          _currentIndex], // Displaying current screen based on _currentIndex
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
+        currentIndex: _currentIndex, // Tracks the selected tab
         onTap: (index) {
           setState(() {
-            _currentIndex = index;
+            _currentIndex = index; // Updates the index when a tab is tapped
           });
         },
         items: const [

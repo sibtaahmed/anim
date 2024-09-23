@@ -4,9 +4,12 @@
 // import 'package:anim/mapping.dart';
 // import 'package:anim/chatgpt.dart';
 // import 'package:anim/bottomnavigator.dart';
+import 'package:anim/bottomnavigator.dart';
+import 'package:anim/onboardingscreen.dart';
 // import 'package:anim/bottomprep.dart';
 // import 'package:anim/form.dart';
-import 'package:anim/splash.dart';
+// import 'package:anim/onboardingscreen.dart';
+// import 'package:anim/splash.dart';
 // import 'package:anim/tabbar.dart';
 // import 'package:device_preview/device_preview.dart';
 // import 'package:anim/prefs.dart';
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: crossfade(),
-      home: const splassh(),
+      home: const boarding(),
     );
   }
 }

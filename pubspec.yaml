@@ -42,6 +42,7 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   flutter_native_splash: ^2.4.1
   typewritertext: ^3.0.9
+  smooth_page_indicator: ^1.2.0+3
 
   
 

@@ -28,16 +28,24 @@ class _splasshState extends State<splassh> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Center(
-        child: TypeWriter.text(
-          'Welcome to my App........',
-          style: const TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'assets/Dp.jpg',
+            width: 150,
+            height: 150,
           ),
-          duration: const Duration(milliseconds: 80),
-        ),
+          TypeWriter.text(
+            'Welcome to my App........',
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            duration: const Duration(milliseconds: 80),
+          ),
+        ],
       ),
     );
   }
