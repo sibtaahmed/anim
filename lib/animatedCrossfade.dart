@@ -2,6 +2,7 @@
 
 // import 'package:anim/animatedOpacity.dart';
 import 'package:anim/animatedOpacity.dart';
+import 'package:anim/onboardingscreen.dart';
 import 'package:flutter/material.dart';
 
 class crossfade extends StatefulWidget {

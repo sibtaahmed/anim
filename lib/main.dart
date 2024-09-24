@@ -4,8 +4,9 @@
 // import 'package:anim/mapping.dart';
 // import 'package:anim/chatgpt.dart';
 // import 'package:anim/bottomnavigator.dart';
-import 'package:anim/bottomnavigator.dart';
-import 'package:anim/onboardingscreen.dart';
+// import 'package:anim/bottomnavigator.dart';
+// import 'package:anim/onboardingscreen.dart';
+import 'package:anim/splash.dart';
 // import 'package:anim/bottomprep.dart';
 // import 'package:anim/form.dart';
 // import 'package:anim/onboardingscreen.dart';
@@ -20,6 +21,7 @@ import 'package:anim/onboardingscreen.dart';
 // import 'package:anim/animatedOpacity.dart';
 // import 'package:anim/animprep.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // void main() => runApp(
@@ -28,9 +30,19 @@ import 'package:shared_preferences/shared_preferences.dart';
 //       ),
 //     );
 
-void main() => runApp(
-      const MyApp(), // Wrap your app
-    );
+// void main() => runApp(
+//       const MyApp(), // Wrap your app
+//     );
+
+void main() {
+  // Set status bar color and icon brightness
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Color.fromARGB(255, 255, 253, 253), // Set status bar color
+    statusBarIconBrightness: Brightness.dark, // Set status bar icon color
+  ));
+
+  runApp(const MyApp());
+}
 
 SharedPreferences? prefs;
 
@@ -58,7 +70,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: crossfade(),
-      home: const boarding(),
+      home: const splassh(),
     );
   }
 }

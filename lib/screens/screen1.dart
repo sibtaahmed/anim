@@ -6,7 +6,7 @@ class screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset('assets/undraw4.png'),
         const SizedBox(
