@@ -36,7 +36,7 @@ class _boardingState extends State<boarding> {
             children: const [screen1(), screen2(), screen3(), screen4()],
           ),
           Container(
-            alignment: const Alignment(0, 0.8),
+            alignment: const Alignment(0, 0.9),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
